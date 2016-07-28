@@ -1,0 +1,221 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #fff;
+    background: #181a1e;
+    font-family: sans-serif;
+}
+
+a{
+    color: #e58929;
+    text-decoration: none;
+    line-height: inherit;
+    cursor: pointer;
+}
+
+a:hover {
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    transition: all .1s linear;
+    color: #c87629;
+}
+
+td.lost{
+    color: red;
+}
+
+td.win{
+    color: green;
+}
+
+.game_hash{
+    font-size: 9px;
+}
+
+.box{
+    margin: 3px;
+    padding: 3px;
+    border: 1px solid #292d35;
+}
+
+.form .field label{
+    color: #b0b3c1 !important;
+}
+
+#faucetClaimCaptcha{
+    position: absolute;
+    width: 304px;
+    left: calc(50% - 152px);
+    top: -90px;
+    transition: top 1s ease;
+    z-index: 1000;
+}
+
+#top_bar{
+    width: 100%;
+    height: 40px;
+    background-color: #292d35;
+    margin-bottom: 10px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+#site_container{
+    width: 70%;
+    min-width: 800px;
+    margin: auto;
+}
+
+#bust_box{
+    width: calc(50% - 10px);
+    height: 400px;
+    text-align: center;
+    line-height: 400px;
+    font-size: 16px;
+    font-size: 2vw;
+    color: grey;
+    display: inline-block;
+}
+
+#control_box{
+    width: calc(50% - 10px);
+    height: 400px;
+    display: inline-block;
+    float: right;
+    padding: 0;
+}
+
+#control_box .form{
+    margin: 5px;
+}
+
+#control_tabs{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+
+#control_tabs .tab{
+    width: 50%;
+    display: inline-block;
+    background-color: #292d35;
+    text-align: center;
+    cursor: pointer;
+    color: #b0b3c1;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+#control_tabs .tab:hover{
+    color: rgba(228,121,3,1);
+}
+
+#control_tabs .tab.selected{
+    width: 50%;
+    display: inline-block;
+    background-color: #181a1e;
+    cursor: default;
+    color: rgba(228,121,3,1);
+}
+
+#autoTab{
+    display: none;
+}
+#autoBet_button{
+    color:black;
+}
+
+#bet_cashout_button {
+    display: block;
+    padding: 0;
+    margin: 10px auto 0 auto;
+    width: calc(100% - 10px);
+    height: 205px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(243,150,47,1);
+    position: relative;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 3rem;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-box-shadow: 0 6px 0 #ff5205,0 9px 25px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 6px 0 #ff5205,0 9px 25px rgba(0,0,0,.1);
+    box-shadow: 0 6px 0 #ff5114,0 9px 25px rgba(0,0,0,.1);
+    margin-bottom: 10px;
+    border: 0;
+    outline: 0;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+#bet_cashout_button:active{
+    -webkit-box-shadow: 0 3px 0 #ba3c12,0 3px 6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 3px 0 #ba3c12,0 3px 6px rgba(0,0,0,.2);
+    box-shadow: 0 3px 0 #ba3c12,0 3px 6px rgba(0,0,0,.2);
+    position: relative;
+    top: 6px;
+}
+
+#bet_cashout_button .disabled{
+    background-color: rgba(168,168,168,1);
+    -webkit-box-shadow: 0 3px 0 #ba3c12,0 3px 6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 3px 0 #ba3c12,0 3px 6px rgba(0,0,0,.2);
+    box-shadow: 0 3px 0 #666,0 3px 6px rgba(0,0,0,.2);
+    cursor: default;
+}
+
+#history_box thead tr th{
+    width: 25%;
+    padding: 3px;
+    color: #b0b3c1;
+    border-bottom: 1px solid rgba(94,94,94,.2);
+}
+
+#history_box tbody tr{
+    height: 20px !important;
+    color: white;
+}
+
+#history_box tbody tr td{
+    padding: 3px;
+}
+
+#history_box tbody tr.even{
+    background-color: #1a1c21;
+}
+
+#history_box tbody tr:hover{
+    color: #000;
+    background: rgba(255,129,0 ,.4);
+}
+
+#logo{
+    color: #e58929;
+    line-height: 40px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-left: 1rem;
+    font-family: "Courier New";
+    display: inline-block;
+}
+
+#login{
+    margin-right: 10px;
+    float: right;
+}
+
+#userinfo{
+    display: none;
+    margin-right: 10px;
+    float: right;
+}

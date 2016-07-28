@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+        <title>BustaBit - Moneypot Casino!</title>
+
+        <meta name="description" content="Moneypot Casino like BustaBit" />
+
+        <link rel="shortcut icon" href="lib/img/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" />
+        <link rel="stylesheet" type="text/css" href="lib/css/style.css" />
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.6/socket.io.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+
+        
+    </head>
+    
+    <body>
+        <div id="faucetClaimCaptcha"></div>
+        
+        <div id="top_bar">
+            <div id="logo">BustaBit</div>
+            <div id="userinfo">
+                <a href="#" id="faucetButton">Faucet</a> - <a href="#" id="depositButton">Deposit</a> - <a href="#" id="withdrawButton">Withdraw</a> - 
+                <span id="balance_info">Bits: <span id="balance">0</span></span>
+                <a id="username"></a>
+            </div>
+            <div id="login">
+                <a href="https://www.moneypot.com/oauth/authorize?app_id=1399&response_type=token&state=Meh&redirect_uri=https://bustabit.cryptogame.tk">Login/Register</a>
+            </div>
+        </div>
+
+        <div id="site_container" class="box">
+            <div id="bust_box" class="box"><span>Waiting for bets...</span></div>
+            <div id="control_box" class="box">
+                <div id="control_tabs"><div class="tab selected" id="manualTabButton">MANUAL</div><div class="tab" id="autoTabButton">AUTO</div></div>
+                <div class="ui form" id="manualTab">
+                    <div class="field">
+                        <label>Bet</label>
+                        <div class="ui right labeled input">
+                            <input id="bet_input" type="text" placeholder="Bet amount..." value="1" disabled>
+                            <div class="ui basic label">Bits</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Auto Cash Out</label>
+                        <div class="ui right labeled input">
+                            <input id="cashout_input" type="text" placeholder="Cashout..." value="2" disabled>
+                            <div class="ui basic label">x</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui form" id="autoTab">
+                    <div class="field">
+                        <label>Base Bet</label>
+                        <div class="ui right labeled input">
+                            <input id="auto_bet_input" type="text" placeholder="Bet amount..." value="1" disabled>
+                            <div class="ui basic label">Bits</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Auto Cash Out</label>
+                        <div class="ui right labeled input">
+                            <input id="auto_cashout_input" type="text" placeholder="Cashout..." value="2" disabled>
+                            <div class="ui basic label">x</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>On loss, increase bet:</label>
+                        <div class="ui right labeled input">
+                            <input id="auto_increase_on_loss_input" type="text" placeholder="Increase on loss..." value="2" disabled>
+                            <div class="ui basic label">x</div>
+                        </div>
+                    </div>
+                    <button id="autoBet_button">Run</button>
+                </div>
+                <button id="bet_cashout_button">Login to bet!</button>
+            </div>
+
+            <div id="history_box" class="box">
+                <table class="ui very basic table">
+                    <thead>
+                        <tr>
+                            <th>CRASH</th>
+                            <th>BET</th>
+                            <th>PROFIT</th>
+                            <th>HASH</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history_log">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="lib/js/script.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    </body>
+</html>
